@@ -1,0 +1,32 @@
+h3{
+    color:blue;
+}
+h5{
+    color:red;
+}
+P{
+    color: green;
+}
+#welcome{
+    color: yellow;
+}
+h5.text{
+    color: orchid;
+}
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h5,p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*
+SIMPLE SELECTOR TYPES
+    -TAGS SELECTOR
+    -ID SELECTOR
+    -CLASS SELECTOR / TAG+CLASS
+    -UNIVERSAL SELECTOR
+    -GROUPING SELECTOR
+*/

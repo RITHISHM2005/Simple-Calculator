@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CALCULATOR</title>
+        <link rel="stylesheet" href="StylesCalculator.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="container">
+                    <input type="text" id="input">
+                <br>
+                    <input type="button" value="on" onclick="onoff('on')" id="btnPower">
+                    <input type="button" value="%" onclick="dis('%')" id="btnPercent">
+                    <input type="button" value="/" onclick="dis('/')" id="btnDivide">
+                    <input type="button" value="c" onclick="clean()" id="btnClear">
+                <br>
+                    <input type="button" value="7" onclick="dis('7')" id="btn7">
+                    <input type="button" value="8" onclick="dis('8')" id="btn8">
+                    <input type="button" value="9" onclick="dis('9')" id="btn9">
+                    <input type="button" value="*" onclick="dis('*')" id="btnMultiply">
+                <br>
+                    <input type="button" value="4" onclick="dis('4')" id="btn4">
+                    <input type="button" value="5" onclick="dis('5')" id="btn5">
+                    <input type="button" value="6" onclick="dis('6')" id="btn6">
+                    <input type="button" value="+" onclick="dis('+')" id="btnAdd">
+                <br>
+                    <input type="button" value="1" onclick="dis('1')" id="btn1">
+                    <input type="button" value="2" onclick="dis('2')" id="btn2">
+                    <input type="button" value="3" onclick="dis('3')" id="btn3">  
+                    <input type="button" value="-" onclick="dis('-')" id="btnSubtract">
+                <br>
+                    <input type="button" value="." onclick="dis('.')" id="btnDot">
+                    <input type="button" value="0" onclick="dis('0')" id="btn0">
+                    <input type="button" value="DEL" onclick="deletelast()" id="btnDelete">
+                    <input type="button" value="=" onclick="solve()" id="btnEqual">
+            </div>
+        </div>
+            <script>
+                function onoff()
+                {
+                    document.getElementById("input").value=0
+                    var o=1;
+                }
+                function dis(x)
+                {
+                    if(document.getElementById("input").value==0)
+                    {
+                        document.getElementById("input").value ="";
+                        document.getElementById("input").value+=x;
+                    }
+                    else
+                    {
+                        document.getElementById("input").value+=x;
+                    }
+                }
+                function clean(x)
+                {
+                    document.getElementById("input").value=0;
+                }
+                function solve()
+                {
+                    var x=document.getElementById("input").value;
+                    var y=eval(x);
+                    document.getElementById("input").value=y;
+                }
+                function deletelast()
+                {
+                    var x=document.getElementById("input").value;
+                    var y=x.slice(0,-1);
+                    document.getElementById("input").value=y;
+                }
+                function power()
+                {
+                    var x=document.getElementById("input").value;
+                }
+            </script>
+    </body>
+</html>
